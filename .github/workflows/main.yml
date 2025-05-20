@@ -13,6 +13,7 @@ jobs:
           asoc_secret: ${{secrets.ASOC_SECRET}}
           application_id: e76f8ec4-61a5-4ee5-bd63-a273c071eb16
           publish_on_merge: true
+          status: failure
       - name: Run AppScan CodeSweep
         uses: HCL-TECH-SOFTWARE/appscan-codesweep-action@v2.1
     env: 
