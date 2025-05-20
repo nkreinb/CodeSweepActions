@@ -91,8 +91,7 @@ def readCredsFromConfig(config_file):
     return (user,passwd)
 
 def file_exists(dir_path, file_name):
-    #vulnerability
-    p = subprocess.Popen(["dir", dir_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True) 
+    p = subprocess.Popen(["dir", dir_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     (output, err) = p.communicate()
     p_status = p.wait()
     if(file_name in str(output)):
